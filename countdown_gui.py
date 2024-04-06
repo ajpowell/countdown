@@ -29,7 +29,7 @@ class MyFrame(wx.Frame):
 
         # my_sizer = wx.BoxSizer(wx.VERTICAL)
         my_sizer = wx.BoxSizer(wx.HORIZONTAL)
-        self.static_text = wx.StaticText(panel, label='This is the text', style=wx.ALIGN_CENTER)
+        self.static_text = wx.StaticText(panel, label=self.CalcDeltaAsString(), style=wx.ALIGN_CENTER)
         font = wx.Font(24, wx.DEFAULT, wx.NORMAL, wx.NORMAL)
         self.static_text.SetFont(font)
         # my_sizer.Add(self.static_text, 0, wx.ALL | wx.EXPAND, 5)
@@ -60,9 +60,7 @@ class MyFrame(wx.Frame):
         self.Close()
         app.Destroy()
 
-    def update(self, event):
-        # print('Updated: {} '. format(time.ctime()))
-
+    def CalcDeltaAsString(self):
         now = datetime.now()
 
         delta = self.target_datetime - now
@@ -87,7 +85,12 @@ class MyFrame(wx.Frame):
 
         delta_str = wk + dy + hr + mn
 
-        self.static_text.SetLabel(delta_str)
+        return delta_str
+
+    def update(self, event):
+        # print('Updated: {} '. format(time.ctime()))
+
+        self.static_text.SetLabel(self.CalcDeltaAsString())
 
 
 if __name__ == '__main__':
