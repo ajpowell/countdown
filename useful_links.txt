@@ -1,0 +1,12 @@
+https://wxpython.org/
+
+https://wiki.wxpython.org/
+https://wiki.wxpython.org/Getting%20Started#First_steps
+
+https://wiki.wxpython.org/UsingSizers
+
+https://realpython.com/python-gui-with-wxpython/#creating-a-skeleton-application
+
+https://www.blog.pythonlibrary.org/2009/08/25/wxpython-using-wx-timers/
+
+https://zetcode.com/wxpython/dialogs/
