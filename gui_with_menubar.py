@@ -4,6 +4,7 @@ import wx
 class MainWindow(wx.Frame):
     def __init__(self, parent, title):
         wx.Frame.__init__(self, parent, title=title, size=(200, 100))
+
         self.control = wx.TextCtrl(self, style=wx.TE_MULTILINE)
         self.CreateStatusBar()  # A Statusbar in the bottom of the window
 

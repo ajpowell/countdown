@@ -7,7 +7,7 @@ import math
 
 
 class MyFrame(wx.Frame):
-    target_datetime = datetime.strptime('2024-04-29 09:00:00', '%Y-%m-%d %H:%M:%S')
+    target_datetime = datetime.strptime('2024-04-26 17:00:00', '%Y-%m-%d %H:%M:%S')
 
     def __init__(self):
         super().__init__(parent=None, title='Countdown')
@@ -15,7 +15,7 @@ class MyFrame(wx.Frame):
         self.SetSize((300, 100))
 
         panel = wx.Panel(self)
-        # self.SetBackgroundColour((255, 0, 0))
+        # self.SetBackgroundColour('#4f5049')
 
         self.timer = wx.Timer(self)
         self.Bind(wx.EVT_TIMER, self.update, self.timer)
@@ -95,5 +95,7 @@ class MyFrame(wx.Frame):
 
 if __name__ == '__main__':
     app = wx.App()
+
     frame = MyFrame()
+
     app.MainLoop()
